@@ -1,0 +1,35 @@
+---
+description: Padrões de código e organização do App Comandas Canastra
+alwaysApply: true
+---
+
+# Padrões do Projeto
+
+## Estrutura e organização
+- Respeite a organização atual em `src/`: `app/`, `components/`, `api/`, `context/`, `providers/`, `lib/`, `storage/`.
+- Em rotas Next.js, mantenha `page.tsx`, `layout.tsx` e pastas de apoio próximas da feature (ex.: `_components`).
+- Reutilize componentes de `src/components/ui` antes de criar novos blocos de interface.
+
+## Nomenclatura
+- Arquivos e pastas em `kebab-case` (ex.: `orders-table.tsx`, `get-close-orders.ts`).
+- Componentes React, tipos e interfaces em `PascalCase`.
+- Funções, variáveis e props em `camelCase`.
+- Constantes de valor fixo/global em `UPPER_SNAKE_CASE`.
+- Use imports com alias `@/` para módulos internos.
+
+## Clean code
+- Prefira funções e componentes curtos, com responsabilidade única.
+- Remova código morto, duplicações e comentários redundantes.
+- Evite lógica complexa inline no JSX; extraia helpers quando necessário.
+- Faça early return para reduzir aninhamento e melhorar legibilidade.
+
+## Componentização
+- Sempre que possível, extraia blocos reutilizáveis em componentes.
+- Quando um `page.tsx` crescer, mova trechos de UI e estados locais para componentes da feature.
+- Encapsule comportamento repetido em hooks ou utilitários (`src/lib`) quando fizer sentido.
+
+## Stacks Utilizadas
+
+- Sempre utilizar react-query para requisições
+- Utilize zod para verificação
+- 
